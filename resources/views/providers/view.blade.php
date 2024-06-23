@@ -18,6 +18,10 @@
                 <strong>Address:</strong>
                 <p class="form-control-plaintext">{{ $provider->address }}</p>
             </div>
+            <div class="mb-3">
+                <strong>Phone:</strong>
+                <p class="form-control-plaintext">{{ $provider->phone }}</p>
+            </div>
             <a href="{{ route('providers.index') }}" class="btn btn-secondary">Back</a>
         </div>
     </div>

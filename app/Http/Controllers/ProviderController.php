@@ -23,12 +23,12 @@ class ProviderController extends Controller
         $request->validate([
             'name' => 'required',
             'address' => 'required',
+            'phone' => 'required',
         ]);
 
         Provider::create($request->all());
 
-        return redirect()->route('providers.index')
-                        ->with('success', 'Provider created successfully.');
+        return redirect()->route('providers.index')->with('success', 'Provider created successfully.');
     }
 
     public function show(Provider $provider)
@@ -46,19 +46,18 @@ class ProviderController extends Controller
         $request->validate([
             'name' => 'required',
             'address' => 'required',
+            'phone' => 'required',
         ]);
 
         $provider->update($request->all());
 
-        return redirect()->route('providers.index')
-                        ->with('success', 'Provider updated successfully.');
+        return redirect()->route('providers.index')->with('success', 'Provider updated successfully.');
     }
 
     public function destroy(Provider $provider)
     {
         $provider->delete();
 
-        return redirect()->route('providers.index')
-                        ->with('success', 'Provider deleted successfully.');
+        return redirect()->route('providers.index')->with('success', 'Provider deleted successfully.');
     }
 }

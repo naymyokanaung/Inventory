@@ -19,6 +19,10 @@
             <label for="address">Address:</label>
             <textarea id="address" name="address" class="form-control" rows="3" required></textarea>
         </div>
+        <div class="form-group">
+            <label for="address">Phone:</label>
+            <input type="text" id="phone" name="phone" class="form-control" required>
+        </div>
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
 </div>

@@ -19,6 +19,10 @@
             <label for="address">Address:</label>
             <textarea id="address" name="address" class="form-control" rows="3" required>{{ $provider->address }}</textarea>
         </div>
+        <div class="form-group">
+            <label for="name">Phone:</label>
+            <input type="text" id="phone" name="phone" class="form-control" value="{{ $provider->phone }}" required>
+        </div>
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
