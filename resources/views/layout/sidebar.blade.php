@@ -10,6 +10,18 @@
         </li>
         <li class="nav-item nav-category">UI Elements</li>
         <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#providers-menu" aria-expanded="false" aria-controls="providers-menu">
+              <i class="menu-icon mdi mdi-floor-plan"></i>
+              <span class="menu-title">Provider</span>
+              <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="providers-menu">
+              <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="{{ route('providers.index') }}">All Providers</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ route('providers.create') }}">Create Provider</a></li>
+              </ul>
+          </div>
+      </li>      
           <a class="nav-link" href="{{ route('product.index') }}" aria-expanded="false" aria-controls="ui-basic">
             <i class="menu-icon mdi mdi-floor-plan"></i>
             <span class="menu-title">Products</span>
