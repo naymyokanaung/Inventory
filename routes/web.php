@@ -21,11 +21,7 @@ use App\Http\Controllers\WarehouseController;
 
 Route::get('/', function () {
     return view('index');
-});
-
-Route::get('/home', function () {
-    return view('index');
-});
+})->name('index');
 
 Route::resource('/customer', CustomerController::class);
 Route::resource('/category', CategoryController::class);
