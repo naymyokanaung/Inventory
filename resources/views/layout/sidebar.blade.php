@@ -26,6 +26,18 @@
               <i class="menu-icon mdi mdi-floor-plan"></i>
               <span class="menu-title">Customer</span>
           </a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('location.index') }}">
+              <i class="menu-icon mdi mdi-floor-plan"></i>
+              <span class="menu-title">Location</span>
+          </a>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('warehouse.index') }}">
+              <i class="menu-icon mdi mdi-floor-plan"></i>
+              <span class="menu-title">Warehouse</span>
+          </a>
         </li>    
         </li>
         <li class="nav-item">
