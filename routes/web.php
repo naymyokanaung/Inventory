@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LocationController;
@@ -19,7 +20,7 @@ use App\Http\Controllers\WarehouseController;
 */
 
 Route::get('/', function () {
-    return view('layout.master');
+    return view('index');
 });
 
 Route::get('/home', function () {
@@ -27,7 +28,8 @@ Route::get('/home', function () {
 });
 
 Route::resource('/customer', CustomerController::class);
+Route::resource('/category', CategoryController::class);
 Route::resource('/product', ProductController::class);
-Route::resource('/providers', ProviderController::class);
+Route::resource('/provider', ProviderController::class);
 Route::resource('/location', LocationController::class);
 Route::resource('/warehouse', WarehouseController::class);

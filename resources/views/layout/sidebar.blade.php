@@ -3,18 +3,24 @@
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="">
             <i class="mdi mdi-grid-large menu-icon"></i>
             <span class="menu-title">Dashboard</span>
           </a>
         </li>
         <li class="nav-item nav-category">UI Elements</li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('providers.index') }}">
+          <a class="nav-link" href="{{ route('provider.index') }}">
               <i class="menu-icon mdi mdi-floor-plan"></i>
               <span class="menu-title">Provider</span>
           </a>
         </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('category.index') }}">
+              <i class="menu-icon mdi mdi-floor-plan"></i>
+              <span class="menu-title">Category</span>
+          </a>
+        </li> 
         <li class="nav-item">
           <a class="nav-link" href="{{ route('product.index') }}">
               <i class="menu-icon mdi mdi-floor-plan"></i>

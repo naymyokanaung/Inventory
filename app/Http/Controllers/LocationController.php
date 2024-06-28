@@ -49,7 +49,7 @@ class LocationController extends Controller
     {
         $locations = $this->locations->findOrFail($id);
         $locations->update($request->all());
-        return redirect()->route('location.index')->with('message', 'Location Updated Successfully!!');
+        return redirect()->route('location.index')->with('success', 'Location Updated Successfully!!');
     }
 
     public function destroy($id)

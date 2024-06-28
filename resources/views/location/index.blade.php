@@ -2,6 +2,15 @@
 
 @section('main')
     <section class="mt-5">
+        @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show d-flex justify-content-between align-items-center"
+                role="alert">
+                <div>
+                    {{ session('success') }}
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h4>Location Information</h4>

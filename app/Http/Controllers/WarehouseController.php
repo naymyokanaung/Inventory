@@ -57,7 +57,7 @@ class WarehouseController extends Controller
     {
         $warehouses = $this->warehouses->findOrFail($id);
         $warehouses->update($request->all());
-        return redirect()->route('warehouse.index')->with('message', 'Warehouse Update Successfully!');
+        return redirect()->route('warehouse.index')->with('success', 'Warehouse Update Successfully!');
     }
 
     public function destroy($id)
