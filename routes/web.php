@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProviderController;
 
@@ -24,6 +25,7 @@ Route::get('/home', function () {
     return view('index');
 });
 
+Route::resource('/customer', CustomerController::class);
 Route::resource('/product', ProductController::class);
 
 

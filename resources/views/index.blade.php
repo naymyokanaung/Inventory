@@ -1,6 +1,6 @@
 @include('layout.nav')
 @include('layout.sidebar')
-        <!-- partial -->
+        {{-- <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="row">
@@ -723,5 +723,5 @@
               </div>
             </div>
           </div>
-          <!-- content-wrapper ends -->
+          <!-- content-wrapper ends --> --}}
 @include('layout.footer')
