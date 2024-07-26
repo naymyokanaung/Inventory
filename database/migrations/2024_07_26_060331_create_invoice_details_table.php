@@ -13,17 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('purchase_orders', function (Blueprint $table) {
+        Schema::create('invoice_details', function (Blueprint $table) {
             $table->id();
-            $table->string('order_no');
-            $table->unsignedBigInteger('order_id');
-            $table->date('purchaseorder_date');
+            $table->unsignedBigInteger('product_id');
+            $table->decimal('price', 8, 2);
+            $table->integer('qty');
+            $table->decimal('total', 8, 2); 
             $table->timestamps();
         });
-        Schema::table('purchase_orders',function(Blueprint $table){
-            $table->foreign('order_id')->on('purchase_details')->references('id')->onDelete('cascade');
+        Schema::table('invoice_details',function(Blueprint $table){
+            $table->foreign('product_id')->on('products')->references('id')->onDelete('cascade');
         });
-        
     }
 
     /**
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchase_orders');
+        Schema::dropIfExists('invoice_details');
     }
 };

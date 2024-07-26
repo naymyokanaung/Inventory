@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('purchase_order_details', function (Blueprint $table) {
+        Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('provider_id');
-            $table->unsignedBigInteger('product_id');
-            $table->integer('qty');
+            $table->unsignedBigInteger('role_id');
+            $table->string('route_name');
             $table->timestamps();
+        });
+        Schema::table('permissions',function(Blueprint $table){
+            $table->foreign('role_id')->on('roles')->references('id')->onDelete('cascade');
         });
     }
 
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchase_order_details');
+        Schema::dropIfExists('permissions');
     }
 };
