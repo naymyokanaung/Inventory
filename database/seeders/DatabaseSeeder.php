@@ -18,6 +18,18 @@ class DatabaseSeeder extends Seeder
             RolesTableSeeder::class,
             PermissionsTableSeeder::class,
             UsersTableSeeder::class,
+            ProvidersTableSeeder::class,
+            CategoriesTableSeeder::class,
+            CustomersTableSeeder::class,
+            LocationsTableSeeder::class,
+            ProductsTableSeeder::class,
+            PurchaseDetailsTableSeeder::class,
+            PurchaseOrdersTableSeeder::class,
+            WarehousesTableSeeder::class,
+            InventoriesTableSeeder::class,
+            SalesDetailsTableSeeder::class,
+            SalesTableSeeder::class,
+            StockPriceTableSeeder::class,
             
         ]);
 

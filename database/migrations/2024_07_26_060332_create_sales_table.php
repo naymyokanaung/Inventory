@@ -13,19 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('invoices', function (Blueprint $table) {
+        Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->date('date');
             $table->string('number');
-            $table->unsignedBigInteger('invoice_detail');
+            $table->unsignedBigInteger('sales_detail');
             $table->unsignedBigInteger('cus_id')->default(1);
             $table->string('email')->nullable();
             $table->string('phone');
             $table->timestamps();
         });
-        Schema::table('invoices',function(Blueprint $table){
+        Schema::table('sales',function(Blueprint $table){
             $table->foreign('cus_id')->on('customers')->references('id')->onDelete('cascade');
-            $table->foreign('invoice_detail')->on('invoice_details')->references('id')->onDelete('cascade');
+            $table->foreign('sales_detail')->on('sales_details')->references('id')->onDelete('cascade');
         });
     }
     /**
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('invoices');
+        Schema::dropIfExists('sales');
     }
 };

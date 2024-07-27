@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class RolesTableSeeder extends Seeder
+class SalesDetailsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,11 +16,9 @@ class RolesTableSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('roles')->insert([
-            ['id' => 1, 'roles' => 'Admin'],
-            ['id' => 2, 'roles' => 'Manager'],
-            ['id' => 3, 'roles' => 'Sales_Staff'],
-            ['id' => 4, 'roles' => 'Purchase_Staff'],
+        DB::table('sales_details')->insert([
+            ['product_id' => 1, 'price' => 1200.00, 'qty' => 1, 'total' => 1200.00],
+            ['product_id' => 2, 'price' => 800.00, 'qty' => 2, 'total' => 1600.00],
         ]);
     }
 }
