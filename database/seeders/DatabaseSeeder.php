@@ -23,12 +23,12 @@ class DatabaseSeeder extends Seeder
             CustomersTableSeeder::class,
             LocationsTableSeeder::class,
             ProductsTableSeeder::class,
-            PurchaseDetailsTableSeeder::class,
             PurchaseOrdersTableSeeder::class,
+            PurchaseDetailsTableSeeder::class,
             WarehousesTableSeeder::class,
             InventoriesTableSeeder::class,
-            SalesDetailsTableSeeder::class,
             SalesTableSeeder::class,
+            SalesDetailsTableSeeder::class,
             StockPriceTableSeeder::class,
             
         ]);

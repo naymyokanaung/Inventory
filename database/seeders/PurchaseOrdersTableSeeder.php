@@ -17,8 +17,8 @@ class PurchaseOrdersTableSeeder extends Seeder
     {
         //
         DB::table('purchase_orders')->insert([
-            ['order_no' => 'PO001', 'order_id' => 1, 'purchaseorder_date' => '2024-01-01'],
-            ['order_no' => 'PO002', 'order_id' => 2, 'purchaseorder_date' => '2024-02-01'],
+            ['order_no' => 'PO001',  'purchaseorder_date' => '2024-01-01'],
+            ['order_no' => 'PO002',  'purchaseorder_date' => '2024-02-01'],
         ]);
     }
 }

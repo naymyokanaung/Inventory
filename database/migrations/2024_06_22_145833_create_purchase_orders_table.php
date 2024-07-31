@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('purchase_orders', function (Blueprint $table) {
             $table->id();
             $table->string('order_no');
-            $table->unsignedBigInteger('order_id');
+            // $table->unsignedBigInteger('order_id');
             $table->date('purchaseorder_date');
             $table->timestamps();
         });
-        Schema::table('purchase_orders',function(Blueprint $table){
-            $table->foreign('order_id')->on('purchase_details')->references('id')->onDelete('cascade');
-        });
+        // Schema::table('purchase_orders',function(Blueprint $table){
+        //     $table->foreign('order_id')->on('purchase_details')->references('id')->onDelete('cascade');
+        // });
         
     }
 

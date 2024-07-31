@@ -17,8 +17,8 @@ class SalesDetailsTableSeeder extends Seeder
     {
         //
         DB::table('sales_details')->insert([
-            ['product_id' => 1, 'price' => 1200.00, 'qty' => 1, 'total' => 1200.00],
-            ['product_id' => 2, 'price' => 800.00, 'qty' => 2, 'total' => 1600.00],
+            ['product_id' => 1, 'sales_id' => 1 , 'price' => 1200.00, 'qty' => 1, 'total' => 1200.00],
+            ['product_id' => 2, 'sales_id' => 2 , 'price' => 800.00, 'qty' => 2, 'total' => 1600.00],
         ]);
     }
 }

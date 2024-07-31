@@ -17,8 +17,8 @@ class SalesTableSeeder extends Seeder
     {
         //
         DB::table('sales')->insert([
-            ['date' => '2024-03-01', 'number' => 'INV001', 'sales_detail' => 1, 'cus_id' => 1, 'email' => 'john@example.com', 'phone' => '5555555555'],
-            ['date' => '2024-03-02', 'number' => 'INV002', 'sales_detail' => 2, 'cus_id' => 2, 'email' => 'jane@example.com', 'phone' => '4444444444'],
+            ['date' => '2024-03-01', 'number' => 'INV001',  'cus_id' => 1, 'email' => 'john@example.com', 'phone' => '5555555555'],
+            ['date' => '2024-03-02', 'number' => 'INV002',  'cus_id' => 2, 'email' => 'jane@example.com', 'phone' => '4444444444'],
         ]);
     }
 }
